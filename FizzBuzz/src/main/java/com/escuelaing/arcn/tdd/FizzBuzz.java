@@ -1,18 +1,33 @@
-public class FizzBuzz {
+public final class FizzBuzz {
+
+    private static final int FIZZ_DIVISOR = 3;
+    private static final int BUZZ_DIVISOR = 5;
+
+    private static final String FIZZ = "Fizz";
+    private static final String BUZZ = "Buzz";
+
+
     public static String fizzbuzz(int number) {
 
-        if (number % 3 == 0 && number % 5 == 0) {
-            return "FizzBuzz";
+        boolean isFizz = isMultipleOf(number, FIZZ_DIVISOR);
+        boolean isBuzz = isMultipleOf(number, BUZZ_DIVISOR);
+
+        if (isFizz && isBuzz) {
+            return FIZZ + BUZZ;
         }
 
-        if (number % 3 == 0) {
-            return "Fizz";
+        if (isFizz) {
+            return FIZZ;
         }
 
-        if (number % 5 == 0) {
-            return "Buzz";
+        if (isBuzz) {
+            return BUZZ;
         }
 
         return String.valueOf(number);
+    }
+
+    private static boolean isMultipleOf(int number, int divisor) {
+        return number % divisor == 0;
     }
 }
