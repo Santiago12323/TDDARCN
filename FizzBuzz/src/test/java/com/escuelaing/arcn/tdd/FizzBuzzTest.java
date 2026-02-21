@@ -7,37 +7,86 @@ class FizzBuzzTest {
 
     @Test
     void testFizzBuzzReturnsNumber() {
-        assertEquals("1", FizzBuzz.fizzbuzz(1));
+        // Arrange
+        int input = 1;
+
+        // Act
+        String result = FizzBuzz.fizzbuzz(input);
+
+        // Assert
+        assertEquals("1", result);
     }
 
     @Test
     void testFizzBuzzMultiplo3() {
-        assertEquals("Fizz", FizzBuzz.fizzbuzz(3));
+        // Arrange
+        int input = 3;
+
+        // Act
+        String result = FizzBuzz.fizzbuzz(input);
+
+        // Assert
+        assertEquals("Fizz", result);
     }
 
     @Test
     void testFizzBuzzMultiplo5() {
-        assertEquals("Buzz", FizzBuzz.fizzbuzz(5));
+        // Arrange
+        int input = 5;
+
+        // Act
+        String result = FizzBuzz.fizzbuzz(input);
+
+        // Assert
+        assertEquals("Buzz", result);
     }
 
     @Test
     void testFizzBuzzMultiplo3y5() {
-        assertEquals("FizzBuzz", FizzBuzz.fizzbuzz(15));
+        // Arrange
+        int input = 15;
+
+        // Act
+        String result = FizzBuzz.fizzbuzz(input);
+
+        // Assert
+        assertEquals("FizzBuzz", result);
     }
 
     @Test
     void testFizzBuzzZero() {
-        assertEquals("FizzBuzz", FizzBuzz.fizzbuzz(0));
+        // Arrange
+        int input = 0;
+
+        // Act
+        String result = FizzBuzz.fizzbuzz(input);
+
+        // Assert
+        assertEquals("FizzBuzz", result);
     }
 
     @Test
     void testFizzBuzzNegativeMultiplo3() {
-        assertEquals("Fizz", FizzBuzz.fizzbuzz(-3));
+        // Arrange
+        int input = -3;
+
+        // Act
+        String result = FizzBuzz.fizzbuzz(input);
+
+        // Assert
+        assertEquals("Fizz", result);
     }
 
     @Test
     void testFizzBuzzNegativeMultiplo5() {
-        assertEquals("Buzz", FizzBuzz.fizzbuzz(-5));
+        // Arrange
+        int input = -5;
+
+        // Act
+        String result = FizzBuzz.fizzbuzz(input);
+
+        // Assert
+        assertEquals("Buzz", result);
     }
 
     @ParameterizedTest
@@ -50,6 +99,14 @@ class FizzBuzzTest {
         "7, 7"
     })
     void testFizzBuzzMultipleValues(int input, String expected) {
-        assertEquals(expected, FizzBuzz.fizzbuzz(input));
+
+        // Arrange
+        int value = input;
+
+        // Act
+        String result = FizzBuzz.fizzbuzz(value);
+
+        // Assert
+        assertEquals(expected, result);
     }
 }
