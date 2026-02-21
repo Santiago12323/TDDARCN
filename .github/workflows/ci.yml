@@ -24,6 +24,7 @@ jobs:
 
       - name: Build, Test & Coverage
         run: mvn clean verify
+        working-directory: FizzBuzz
 
       - name: Upload Test Reports
         if: always()
